@@ -65,6 +65,16 @@ button:not(.detach){
     color: white;
     background-color: $lightNavy;
 
+    &.larger{
+        height: 55px;
+        border-radius: 55px;
+        font-size: 25px;
+        @include tablet(){
+            height: 40px;
+            font-size: 18px;
+        }
+    }
+
     &.sunFlowerYellow{
         color: $denimBlue;
     }

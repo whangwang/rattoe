@@ -10,6 +10,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;600&display=swap" rel="stylesheet">
         <link rel='stylesheet' href='./assets/style/css/global.css' />
         <link rel='stylesheet' href='./assets/style/css/header.css' />
+        <link rel='stylesheet' href='./assets/style/css/footer.css' />
         <link rel='stylesheet' href='./assets/style/css/index.css' />
     </head>
     <body>
@@ -17,13 +18,16 @@
             <div class="container globalHeaderContent">
                 <img src="./assets/images/Rattoe_logo.svg" alt="" class="headerLogo">
                 <div class="headerNav">
-                    <span class="headerNavItem active">最新</span>
-                    <span class="headerNavItem">熱門</span>
-                    <span class="headerNavItem">感情</span>
-                    <span class="headerNavItem">生活</span>
-                    <span class="headerNavItem">綜藝</span>
-                    <span class="headerNavItem">生活</span>
+                    <img src="./assets/images/close_icon.svg" class="tablet-only headerNavClose">
+                    <span class="headerNavItem active"><span>最新</span></span>
+                    <span class="headerNavItem"><span>熱門</span></span>
+                    <span class="headerNavItem"><span>感情</span></span>
+                    <span class="headerNavItem"><span>生活</span></span>
+                    <span class="headerNavItem"><span>綜藝</span></span>
+                    <span class="headerNavItem"><span>生活</span></span>
+                    <span class="tablet-only headerNavItem"><span>Facebook</span></span>
                 </div>
+                <img src="./assets/images/menu_icon.svg" class="tablet-only headerNavToggle">
                 <div class="loginButtonGroup">
                     <button class="detach fbLogin"></button>
                     <button class="detach normalLogin">登入</button>
@@ -124,6 +128,65 @@
                     </div>
                 </div>
             </div>
+            <div class="row quizRow">
+                <div class="col-md-6 col-sm-12">
+                    <div class="quizBlock tealish larger">
+                        <div class="quizCover" style="background-image: url(./assets/images/pic.png);">
+                        </div><div class="quizInfo">
+                            <h1 class="quizTitle">你家的旅蛙是什麼性格你家的旅蛙是什麼性格你家的旅蛙是什麼性格你家的旅蛙是什麼性格你家的旅蛙是什麼性格</h1>
+                            <hr>
+                            <p class="quizDescription">旅蛙是敘述一隻喜歡旅遊的青蛙，這是一款輕鬆游嫌的小遊戲。像是準備小青蛙要出門的行李，以及拍拍旅行時的照片等，有時還會得到各地的土產。旅蛙是敘述一隻喜歡旅遊的青蛙，這是一款輕鬆游嫌的小遊戲。像是準備小青蛙要出門的行李，以及拍拍旅行時的照片等，有時還會得到各地的土產。旅蛙是敘述一隻喜歡旅遊的青蛙，這是一款輕鬆游嫌的小遊戲。像是準備小青蛙要出門的行李，以及拍拍旅行時的照片等，有時還會得到各地的土產。</p>
+                            <div class="quizBottomArea">
+                                <p class="timeStamp">2018/02/19</p>
+                                <div class="actionArea">
+                                    <div class="aboutQuiz">
+                                        <button class="detach shareQuiz"></button>
+                                        <button class="detach rankQuiz">1</button>
+                                        <button class="detach commentQuiz">1</button>
+                                    </div>
+                                    <button class="tealish goNow">立即測驗</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <div class="quizBlock sunFlowerYellow larger">
+                        <div class="quizCover" style="background-image: url(./assets/images/pic.png);">
+                        </div><div class="quizInfo">
+                            <h1 class="quizTitle">你家的旅蛙是什麼性格你家的旅蛙是什麼性格你家的旅蛙是什麼性格你家的旅蛙是什麼性格你家的旅蛙是什麼性格</h1>
+                            <hr>
+                            <p class="quizDescription">旅蛙是敘述一隻喜歡旅遊的青蛙，這是一款輕鬆游嫌的小遊戲。像是準備小青蛙要出門的行李，以及拍拍旅行時的照片等，有時還會得到各地的土產。旅蛙是敘述一隻喜歡旅遊的青蛙，這是一款輕鬆游嫌的小遊戲。像是準備小青蛙要出門的行李，以及拍拍旅行時的照片等，有時還會得到各地的土產。旅蛙是敘述一隻喜歡旅遊的青蛙，這是一款輕鬆游嫌的小遊戲。像是準備小青蛙要出門的行李，以及拍拍旅行時的照片等，有時還會得到各地的土產。</p>
+                            <div class="quizBottomArea">
+                                <p class="timeStamp">2018/02/19</p>
+                                <div class="actionArea">
+                                    <div class="aboutQuiz">
+                                        <button class="detach shareQuiz"></button>
+                                        <button class="detach rankQuiz">1</button>
+                                        <button class="detach commentQuiz">1</button>
+                                    </div>
+                                    <button class="sunFlowerYellow goNow">立即測驗</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="moreQuizContainer">
+                <button class="larger moreQuiz">更多測驗</button>
+            </div>
         </div>
+        <div class="globalFooter">
+            <div class="footerLinks"><a href="#">隱私權政策</a><span class="dot">・</span><a href="#">隱私權政策</a><span class="declare">免責聲明：本站所有內容僅供娛樂用途</span></div>
+            <div class="copyright">COPYRIGHT © 2018 ・ QUIZ RATTOE BY RATTOE INC.</div>
+        </div>
+        <script>
+            $('body').on('click', '.headerNavToggle', function(){
+                $('.headerNav').stop().fadeIn(300)
+            })
+            $('body').on('click', '.headerNavClose', function(){
+                $('.headerNav').stop().fadeOut(300)
+            })
+        </script>
     </body>
 </html>

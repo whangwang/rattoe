@@ -1,0 +1,51 @@
+@import 'config';
+
+.globalFooter{
+    width: 100vw;
+    padding: 20px 0px;
+    background-color: $slateGrey;
+    text-align: center;
+    @include tablet(){
+        padding: 15px 0px;
+    }
+    .footerLinks, .copyright{
+        color: $white-4;
+        font-size: $ft-small;
+        @include tablet(){
+            font-size: 12px;
+        }
+        span{
+            color: $white-4;
+            font-size: $ft-small;
+            @include tablet(){
+                font-size: 12px;
+            }
+            &.dot{
+                margin-left: 5px;
+                margin-right: 5px;
+                @include tablet(){
+                    margin-left: 0px;
+                    margin-right: 0px;
+                }
+            }
+            &.declare{
+                margin-left: 20px;
+                @include tablet(){
+                    margin-left: 5px;
+                }
+            }
+        }
+        a{
+            color: white;
+            &:hover{
+                color: $white-1;
+            }
+        }
+        &.copyright{
+            margin-top: 10px;
+            @include tablet(){
+                margin-top: 5px;
+            }
+        }
+    }
+}

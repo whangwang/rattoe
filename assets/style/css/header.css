@@ -51,10 +51,13 @@
   cursor: pointer;
   position: relative;
   margin-right: 10px;
+}
+
+.globalHeader .globalHeaderContent .headerNav .headerNavItem span {
   color: #898989;
 }
 
-.globalHeader .globalHeaderContent .headerNav .headerNavItem:not(.active):hover {
+.globalHeader .globalHeaderContent .headerNav .headerNavItem:not(.active):hover span {
   color: #135384;
 }
 
@@ -69,9 +72,12 @@
 }
 
 .globalHeader .globalHeaderContent .headerNav .headerNavItem.active {
-  color: #FFFFFF;
   background-color: #135384;
   border-radius: 95px;
+}
+
+.globalHeader .globalHeaderContent .headerNav .headerNavItem.active span {
+  color: #FFFFFF;
 }
 
 .globalHeader .globalHeaderContent .loginButtonGroup {
@@ -107,5 +113,81 @@
   border: 0px;
   user-select: none;
   color: #898989;
+}
+
+@media screen and (max-width: 767px) {
+  .globalHeader {
+    height: 53px;
+    border-top: 3px solid #135384;
+    text-align: center;
+  }
+  .globalHeader .globalHeaderContent .headerLogo {
+    height: 20px;
+    margin: auto;
+    margin-top: 16px;
+  }
+  .globalHeader .globalHeaderContent .headerNav {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    background-color: rgba(19, 83, 132, 0.9);
+    z-index: 10000;
+  }
+  .globalHeader .globalHeaderContent .headerNav .headerNavClose {
+    width: 20px;
+    top: 16px;
+    right: 15px;
+    position: absolute;
+  }
+  .globalHeader .globalHeaderContent .headerNav .headerNavItem {
+    display: block;
+    text-align: center;
+    height: 45px;
+    line-height: 45px;
+    padding: 0px;
+    margin: 0px;
+  }
+  .globalHeader .globalHeaderContent .headerNav .headerNavItem span {
+    color: white;
+    font-size: 18px;
+    margin: 0px;
+    height: 45px;
+    line-height: 45px;
+    position: relative;
+    padding: 0px 15px;
+  }
+  .globalHeader .globalHeaderContent .headerNav .headerNavItem:first-of-type {
+    margin-top: 53px;
+  }
+  .globalHeader .globalHeaderContent .headerNav .headerNavItem.active {
+    background-color: transparent;
+  }
+  .globalHeader .globalHeaderContent .headerNav .headerNavItem.active span:after {
+    content: ' ';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    left: 0px;
+    bottom: -10px;
+  }
+  .globalHeader .globalHeaderContent .headerNav .headerNavItem:not(.active):hover span {
+    color: white;
+  }
+  .globalHeader .globalHeaderContent .headerNav .headerNavItem:not(.active):hover:after {
+    content: none;
+  }
+  .globalHeader .globalHeaderContent .headerNavToggle {
+    width: 20px;
+    top: 16px;
+    right: 15px;
+    position: absolute;
+  }
+  .globalHeader .globalHeaderContent .loginButtonGroup {
+    display: none;
+  }
 }
 /*# sourceMappingURL=header.css.map */

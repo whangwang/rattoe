@@ -161,6 +161,19 @@ button:not(.detach) {
   background-color: #135384;
 }
 
+button:not(.detach).larger {
+  height: 55px;
+  border-radius: 55px;
+  font-size: 25px;
+}
+
+@media screen and (max-width: 767px) {
+  button:not(.detach).larger {
+    height: 40px;
+    font-size: 18px;
+  }
+}
+
 button:not(.detach).sunFlowerYellow {
   color: #3b5998;
 }

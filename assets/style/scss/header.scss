@@ -25,9 +25,13 @@
                 cursor: pointer;
                 position: relative;
                 margin-right: 10px;
-                color: $warmGrey;
+                span{
+                    color: $warmGrey;
+                }
                 &:not(.active):hover{
-                    color: $lightNavy;
+                    span{
+                        color: $lightNavy;
+                    }
                     &:after{
                         content: ' ';
                         position: absolute;
@@ -39,7 +43,9 @@
                     }
                 }
                 &.active{
-                    color: $text-light;
+                    span{
+                        color: $text-light;
+                    }
                     background-color: $lightNavy;
                     border-radius: 95px;
                 }
@@ -75,6 +81,85 @@
                 border: 0px;
                 user-select: none;
                 color: $warmGrey;
+            }
+        }
+    }
+    @include tablet{
+        height: 53px;
+        border-top: 3px solid $lightNavy;
+        text-align: center;
+        .globalHeaderContent{
+            .headerLogo{
+                height: 20px;
+                margin: auto;
+                margin-top: 16px;
+            }
+            .headerNav{
+                display: none;
+                position: fixed;
+                width: 100vw;
+                height: 100vh;
+                left: 0;
+                top: 0;
+                background-color: rgba(19, 83, 132, 0.9);
+                z-index: 10000;
+                .headerNavClose{
+                    width: 20px;
+                    top: 16px;
+                    right: 15px;
+                    position: absolute;
+                }
+                .headerNavItem{
+                    display: block;
+                    text-align: center;
+                    height: 45px;
+                    line-height: 45px;
+                    padding: 0px;
+                    margin: 0px;
+                    span{
+                        color: white;
+                        font-size: $ft-h4;
+                        margin: 0px;
+                        height: 45px;
+                        line-height: 45px;
+                        position: relative;
+                        padding: 0px 15px;
+                    }
+                    &:first-of-type{
+                        margin-top: 53px;
+                    }
+                    &.active{
+                        background-color: transparent;
+                        span{
+                            &:after{
+                                content: ' ';
+                                position: absolute;
+                                width: 100%;
+                                height: 2px;
+                                background-color: white;
+                                left: 0px;
+                                bottom: -10px;
+                            }
+                        }
+                    }
+                    &:not(.active):hover{
+                        span{
+                            color: white;
+                        }
+                        &:after{
+                            content: none;
+                        }
+                    }
+                }
+            }
+            .headerNavToggle{
+                width: 20px;
+                top: 16px;
+                right: 15px;
+                position: absolute;
+            }
+            .loginButtonGroup{
+                display: none;
             }
         }
     }

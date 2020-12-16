@@ -1,0 +1,99 @@
+/* 
+=== Menu ===
+1. Colors
+2. Fonts
+3. Shadows
+4. Grids
+5. Responsive
+=== Menu ===
+*/
+/*
+=== 1. Colors ===
+*/
+/*
+=== 2. Fonts ===
+*/
+/*
+=== 3. Shadows ===
+*/
+/*
+=== 4. Grids ===
+*/
+/*
+=== 5. Responsive ===
+*/
+.globalFooter {
+  width: 100vw;
+  padding: 20px 0px;
+  background-color: #5A6266;
+  text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  .globalFooter {
+    padding: 15px 0px;
+  }
+}
+
+.globalFooter .footerLinks, .globalFooter .copyright {
+  color: #DFDFDF;
+  font-size: 13px;
+}
+
+@media screen and (max-width: 767px) {
+  .globalFooter .footerLinks, .globalFooter .copyright {
+    font-size: 12px;
+  }
+}
+
+.globalFooter .footerLinks span, .globalFooter .copyright span {
+  color: #DFDFDF;
+  font-size: 13px;
+}
+
+@media screen and (max-width: 767px) {
+  .globalFooter .footerLinks span, .globalFooter .copyright span {
+    font-size: 12px;
+  }
+}
+
+.globalFooter .footerLinks span.dot, .globalFooter .copyright span.dot {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+@media screen and (max-width: 767px) {
+  .globalFooter .footerLinks span.dot, .globalFooter .copyright span.dot {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+
+.globalFooter .footerLinks span.declare, .globalFooter .copyright span.declare {
+  margin-left: 20px;
+}
+
+@media screen and (max-width: 767px) {
+  .globalFooter .footerLinks span.declare, .globalFooter .copyright span.declare {
+    margin-left: 5px;
+  }
+}
+
+.globalFooter .footerLinks a, .globalFooter .copyright a {
+  color: white;
+}
+
+.globalFooter .footerLinks a:hover, .globalFooter .copyright a:hover {
+  color: #FBFBFB;
+}
+
+.globalFooter .footerLinks.copyright, .globalFooter .copyright.copyright {
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 767px) {
+  .globalFooter .footerLinks.copyright, .globalFooter .copyright.copyright {
+    margin-top: 5px;
+  }
+}
+/*# sourceMappingURL=footer.css.map */
