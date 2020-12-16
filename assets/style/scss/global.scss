@@ -1,0 +1,183 @@
+/* 
+=== Menu ===
+1. Fonts
+2. Buttons
+3. Margins
+4. Responsive
+=== Menu ===
+*/
+
+@import 'config';
+
+/*
+=== 1. Fonts ===
+*/
+
+body, p, button, input, select, textarea{
+    font-family: 'Noto Sans TC', sans-serif!important; 
+    color: $text-dark;
+}
+
+@for $i from 1 through 6 {
+    h#{$i}{
+        font-size: map-get($ft-h,'h'+$i);
+        font-weight: map-get($ft-weight,'h'+$i);
+        margin-top: 0px;
+        margin-bottom: 0px;
+        &.bold{
+            font-weight: 700;
+        }
+        &.light{
+            font-weight: 400;
+        }
+    }
+}
+
+p, span, label, font, div{
+    font-size: $ft-regular;
+    color: $text-dark;
+    &.text-light{
+        color: $text-light;
+    }
+}
+
+/*
+=== 2. Buttons ===
+*/
+
+button:not(.detach){
+    text-align: center;
+    height: 35px;
+    padding: 0px 15px;
+    font-size: $ft-small;
+    position: relative;
+    transition: background-color .5s;
+    border-radius: 35px;
+    cursor: pointer;
+    outline: none;
+    border: 0px;
+    user-select: none;
+    vertical-align: top;
+    color: white;
+    background-color: $lightNavy;
+
+    @each $key,$val in $buttonColorsList{
+        &.#{$key} {
+          background-color: #{map-get($val, 'default')};
+        }
+    }
+
+    &:hover{
+        color: white;
+        background-color: $lightNavy-200;
+        @each $key,$val in $buttonColorsList{
+            &.#{$key} {
+              background-color: #{map-get($val, 'hover')};
+            }
+        }
+        @include shadow(400);
+    }
+    &:active{
+        color: white;
+        background-color: $lightNavy-600;
+        @each $key,$val in $buttonColorsList{
+            &.#{$key} {
+              background-color: #{map-get($val, 'active')};
+            }
+        }
+        @include shadow(clear);
+    }
+    
+}
+
+/*
+=== 3. Margins ===
+*/
+
+.align-right{
+    text-align: right;
+}
+
+.align-left{
+    text-align: left;
+}
+
+.align-center{
+    text-align: center;
+}
+
+@for $i from 1 through 5{
+    .mt-gutter-#{$i}{
+        margin-top: $gutter-y * $i;
+    }
+    .mb-gutter-#{$i}{
+        margin-bottom: $gutter-y * $i;
+    }
+    .ml-gutter-#{$i}{
+        margin-left: $gutter-x * $i;
+    }
+    .mr-gutter-#{$i}{
+        margin-right: $gutter-x * $i;
+    }
+    .mt-between-#{$i}{
+        margin-top: $between-y * $i;
+    }
+    .mb-between-#{$i}{
+        margin-bottom: $between-y * $i;
+    }
+    .ml-between-#{$i}{
+        margin-left: $between-x * $i;
+    }
+    .mr-between-#{$i}{
+        margin-right: $between-x * $i;
+    }
+    .mt-gutter-between-#{$i}{
+        margin-top: ($gutter-y + $between-y) * $i;
+    }
+    .mb-gutter-between-#{$i}{
+        margin-bottom: ($gutter-y + $between-y) * $i;
+    }
+    .ml-gutter-between-#{$i}{
+        margin-left: ($gutter-x + $between-x) * $i;
+    }
+    .mr-gutter-between-#{$i}{
+        margin-right: ($gutter-x + $between-x) * $i;
+    }
+    .mt-step-#{$i}{
+        margin-top: $step-y * $i;
+    }
+    .mb-step-#{$i}{
+        margin-bottom: $step-y * $i;
+    }
+    .ml-step-#{$i}{
+        margin-left: $step-x * $i;
+    }
+    .mr-step-#{$i}{
+        margin-right: $step-x * $i;
+    }
+    
+}
+
+/*
+=== 4. Responsive ===
+*/
+
+.desk-only{
+    @include tablet(){
+        display: none;
+    }
+}
+
+.tablet-only{
+    display: none;
+    @include tablet(){
+        display: block;
+    }
+}
+
+.mobile-only{
+    display: none;
+    @include mobile(){
+        display: block;
+    }
+}

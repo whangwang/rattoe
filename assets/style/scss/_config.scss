@@ -1,0 +1,172 @@
+/* 
+=== Menu ===
+1. Colors
+2. Fonts
+3. Shadows
+4. Grids
+5. Responsive
+=== Menu ===
+*/
+
+/*
+=== 1. Colors ===
+*/
+$lightNavy: #135384;
+$lightNavy-400: $lightNavy;
+$lightNavy-200: #4e7fb4;
+$lightNavy-600: #002b57;
+$sunFlowerYellow: #FFCE00;
+$sunFlowerYellow-400: $sunFlowerYellow;
+$sunFlowerYellow-200: #ffff51;
+$sunFlowerYellow-600: #c79d00;
+$tealish: #20AFAB;
+$tealish-400: $tealish;
+$tealish-200: #64e1dd;
+$tealish-600: #007f7c;
+$pastelRed: #DC5D5B;
+$pastelRed-400: $pastelRed;
+$pastelRed-200: #ff8e88;
+$pastelRed-600: #a52c32;
+$denimBlue: #3b5998;
+$denimBlue-400: $denimBlue;
+$denimBlue-200: #6d85c9;
+$denimBlue-600: #003069;
+
+$darkGrey: #444444;
+$blueGrey: #6D899E;
+$slateGrey: #5A6266;
+$warmGrey: #898989;
+$warmGreyLight: #9B9B9B;
+$pinkishGrey: #CACACA;
+
+$text-dark: $darkGrey;
+$text-light: #FFFFFF;
+
+$white: #FFFFFF;
+$white-4: #DFDFDF;
+$white-3: #E7E7E7;
+$white-2: #ECECEC;
+$white-1: #FBFBFB;
+
+$buttonColorsList:(
+  lightNavy: (
+    default: $lightNavy,
+    hover: $lightNavy-200,
+    active: $lightNavy-600
+  ),
+  tealish: (
+    default: $tealish,
+    hover: $tealish-200,
+    active: $tealish-600
+  ),
+  sunFlowerYellow: (
+    default: $sunFlowerYellow,
+    hover: $sunFlowerYellow-200,
+    active: $sunFlowerYellow-600
+  ),
+  pastelRed: (
+    default: $pastelRed,
+    hover: $pastelRed-200,
+    active: $pastelRed-600
+  ),
+);
+
+/*
+=== 2. Fonts ===
+*/
+$ft-small: 13px;
+$ft-regular: 15px;
+$ft-h6: 15px;
+$ft-h5: 15px;
+$ft-h4: 18px;
+$ft-h3: 20px;
+$ft-h2: 25px;
+$ft-h1: 30px;
+
+$ft-h: (
+    h1: $ft-h1,
+    h2: $ft-h2,
+    h3: $ft-h3,
+    h4: $ft-h4,
+    h5: $ft-h5,
+    h6: $ft-h6
+);
+
+$ft-weight: (
+    h1: 400,
+    h2: 400,
+    h3: 700,
+    h4: 700,
+    h5: 700,
+    h6: 400
+);
+
+/*
+=== 3. Shadows ===
+*/
+$shadow-config: (
+    400: (
+        opacity: 0.15,
+        blur: 20px
+    ),
+    300: (
+        opacity: 0.25,
+        blur: 10px
+    ),
+    200: (
+        opacity: 0.25,
+        blur: 5px
+    ),
+    600: (
+        opacity: 0.25,
+        blur: 20px
+    )
+);
+@mixin shadow($weight: 400, $color: #000000){
+    @if $weight == 'clear' {
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+    }@else{
+        @if map-has-key($map: $shadow-config, $key: $weight) == false {
+            $weight: 400;
+        }
+        -webkit-box-shadow: 0px 0px #{map-get(map-get($shadow-config,$weight),blur)} 0px rgba(red($color),green($color),blue($color),map-get(map-get($shadow-config,$weight),opacity));
+        -moz-box-shadow: 0px 0px #{map-get(map-get($shadow-config,$weight),blur)} 0px rgba(red($color),green($color),blue($color),map-get(map-get($shadow-config,$weight),opacity));
+        box-shadow: 0px 0px #{map-get(map-get($shadow-config,$weight),blur)} 0px rgba(red($color),green($color),blue($color),map-get(map-get($shadow-config,$weight),opacity));
+    }
+};
+
+/*
+=== 4. Grids ===
+*/
+$gutter-x: 15px;
+$gutter-y: 15px;
+$between-x: 30px;
+$between-y: 30px;
+$step-x: 5px;
+$step-y: 5px;
+
+/*
+=== 5. Responsive ===
+*/
+$tablet-sm-screen: 767px;
+$mobile-xs-screen: 480px;
+
+@mixin tablet(){
+    @media screen and (max-width: $tablet-sm-screen){
+        @content
+    }
+};
+
+@mixin mobile(){
+    @media screen and (max-width: $mobile-xs-screen){
+        @content
+    }
+};
+
+@mixin desk-only(){
+    @media screen and (min-width: $tablet-sm-screen + 1){
+        @content
+    }
+}
