@@ -16,6 +16,7 @@
 body, p, button, input, select, textarea{
     font-family: 'Noto Sans TC', sans-serif!important; 
     color: $text-dark;
+    background-color: $white-2;
 }
 
 @for $i from 1 through 6 {

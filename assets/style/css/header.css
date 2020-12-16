@@ -1,0 +1,110 @@
+/* 
+=== Menu ===
+1. Colors
+2. Fonts
+3. Shadows
+4. Grids
+5. Responsive
+=== Menu ===
+*/
+/*
+=== 1. Colors ===
+*/
+/*
+=== 2. Fonts ===
+*/
+/*
+=== 3. Shadows ===
+*/
+/*
+=== 4. Grids ===
+*/
+/*
+=== 5. Responsive ===
+*/
+.globalHeader {
+  position: fixed;
+  top: 0px;
+  width: 100vw;
+  height: 100px;
+  border-top: 5px solid #135384;
+  background-color: white;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+}
+
+.globalHeader .globalHeaderContent .headerLogo {
+  height: 30px;
+  margin-right: 35px;
+  transform: translate(0px, -2.5px);
+}
+
+.globalHeader .globalHeaderContent .headerNav {
+  height: 95px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.globalHeader .globalHeaderContent .headerNav .headerNavItem {
+  padding: 3px 12px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+  margin-right: 10px;
+  color: #898989;
+}
+
+.globalHeader .globalHeaderContent .headerNav .headerNavItem:not(.active):hover {
+  color: #135384;
+}
+
+.globalHeader .globalHeaderContent .headerNav .headerNavItem:not(.active):hover:after {
+  content: ' ';
+  position: absolute;
+  width: calc( 100% - 20px);
+  height: 2px;
+  background-color: #135384;
+  left: 10px;
+  bottom: 0px;
+}
+
+.globalHeader .globalHeaderContent .headerNav .headerNavItem.active {
+  color: #FFFFFF;
+  background-color: #135384;
+  border-radius: 95px;
+}
+
+.globalHeader .globalHeaderContent .loginButtonGroup {
+  height: 95px;
+  float: right;
+  display: inline-flex;
+  align-items: center;
+}
+
+.globalHeader .globalHeaderContent .loginButtonGroup .fbLogin {
+  height: 30px;
+  width: 30px;
+  background-image: url(../../images/fb_icon.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+  border: 0px;
+  user-select: none;
+  margin-right: 15px;
+}
+
+.globalHeader .globalHeaderContent .loginButtonGroup .normalLogin {
+  padding-left: 20px;
+  background-image: url(../../images/user_icon.png);
+  background-repeat: no-repeat;
+  background-size: 15px;
+  background-position: left;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+  border: 0px;
+  user-select: none;
+  color: #898989;
+}
+/*# sourceMappingURL=header.css.map */
