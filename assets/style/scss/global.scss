@@ -13,10 +13,13 @@
 === 1. Fonts ===
 */
 
+body{
+    background-color: $white-2;
+}
+
 body, p, button, input, select, textarea{
     font-family: 'Noto Sans TC', sans-serif!important; 
     color: $text-dark;
-    background-color: $white-2;
 }
 
 @for $i from 1 through 6 {
@@ -62,6 +65,10 @@ button:not(.detach){
     color: white;
     background-color: $lightNavy;
 
+    &.sunFlowerYellow{
+        color: $denimBlue;
+    }
+
     @each $key,$val in $buttonColorsList{
         &.#{$key} {
           background-color: #{map-get($val, 'default')};
@@ -69,7 +76,6 @@ button:not(.detach){
     }
 
     &:hover{
-        color: white;
         background-color: $lightNavy-200;
         @each $key,$val in $buttonColorsList{
             &.#{$key} {
@@ -79,7 +85,6 @@ button:not(.detach){
         @include shadow(400);
     }
     &:active{
-        color: white;
         background-color: $lightNavy-600;
         @each $key,$val in $buttonColorsList{
             &.#{$key} {

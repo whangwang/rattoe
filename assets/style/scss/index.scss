@@ -1,0 +1,196 @@
+@import 'config';
+
+.indexContainer{
+    margin-top: 145px;    
+    padding-left: 0px;
+    padding-right: 0px;
+    .quizRow{
+        margin-top: 30px;
+    }
+    .quizBlock{
+        background-color: #fff;
+        @include shadow(200);
+        .quizCover{
+            width: 100%;
+            display: block;
+            padding-top: calc( 100% * 9 / 16 );
+            background-color: gray;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .quizInfo{
+            border-top: 10px solid $lightNavy;
+            width: 100%;
+            padding: 5px 15px 15px 15px;
+            display: block;
+            position: relative;
+            .quizTitle{
+                font-weight: 700;
+                overflow:hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                /* autoprefixer: off */
+                -webkit-box-orient: vertical;
+                /* autoprefixer: on */
+                max-height: 27px;
+                line-height: 27px;
+                font-size: $ft-h4;
+                margin-top: 0px;
+            }
+            hr{
+                display: none;
+            }
+            .quizDescription{
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                max-height: 58.5px;
+                line-height: 19.5px;
+                -webkit-line-clamp: 3;
+                /* autoprefixer: off */
+                -webkit-box-orient: vertical;
+                /* autoprefixer: on */
+                overflow: hidden;
+                font-size: $ft-small;
+                color: $warmGreyLight;
+                font-weight: 700;
+                margin-top: 15px;
+            }
+            .quizBottomArea{
+                width: 100%;
+                .timeStamp{
+                    color: $pinkishGrey;
+                    font-size: $ft-small;
+                    margin-bottom: 10px;
+                }
+                .quizTag{
+                    font-size: $ft-small;
+                    color: $warmGreyLight;
+                    padding: 0px 5px;
+                    border: 1px solid $warmGreyLight;
+                    display: inline-block;
+                    margin-right: 5px;
+                    margin-bottom: 5px;
+                }
+                .actionArea{
+                    margin-top: 5px;    
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    .shareQuiz{
+                        height: 18px;
+                        width: 18px;
+                        background-image: url(../../images/share_icon.png);
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-color: transparent;
+                        cursor: pointer;
+                        outline: none;
+                        border: 0px;
+                        user-select: none;
+                        margin-right: 5px;
+                        transform: translate(0px, 2px);
+                    }
+                    .rankQuiz{
+                        padding-left: 23px;
+                        height: 18px;
+                        background-image: url(../../images/rank_icon.png);
+                        background-repeat: no-repeat;
+                        background-size: 18px;
+                        background-position: left;
+                        background-color: transparent;
+                        cursor: pointer;
+                        outline: none;
+                        border: 0px;
+                        user-select: none;
+                        color: $blueGrey;
+                        line-height: 18px;
+                        font-size: $ft-small;
+                    }
+                    .commentQuiz{
+                        padding-left: 23px;
+                        height: 18px;
+                        line-height: 18px;
+                        font-size: $ft-small;
+                        background-image: url(../../images/comments_icon.png);
+                        background-repeat: no-repeat;
+                        background-size: 18px;
+                        background-position: left;
+                        background-color: transparent;
+                        cursor: pointer;
+                        outline: none;
+                        border: 0px;
+                        user-select: none;
+                        color: $blueGrey;
+                    }
+                }
+            }
+        }
+        @each $key,$val in $buttonColorsList{
+            &.#{$key} .quizInfo {
+                border-top: 10px solid #{map-get($val, 'default')};
+            }
+        }
+        &.landing{
+            position: relative;
+            display: flex;
+            .quizCover{
+                width: calc( 100% - 390px );
+                display: inline-block;
+                padding-top: calc( (100% - 390px) * 9 / 16 );
+                vertical-align: top;
+                background-color: gray;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            .quizInfo{
+                border-top: 0px;
+                width: 390px;
+                display: inline-block;
+                padding: 15px;
+                position: relative;
+            }
+            .quizTitle{
+                font-weight: 700;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                max-height: 70px;
+                line-height: 35px;
+                -webkit-line-clamp: 2;
+                /* autoprefixer: off */
+                -webkit-box-orient: vertical;
+                /* autoprefixer: on */
+                overflow: hidden;
+                font-size: 28px;
+            }
+            hr{
+                margin-top: 15px;
+                margin-bottom: 15px;
+                display: block;
+            }
+            .quizDescription{
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                max-height: 100px;
+                line-height: 25px;
+                -webkit-line-clamp: 4;
+                /* autoprefixer: off */
+                -webkit-box-orient: vertical;
+                /* autoprefixer: on */
+                overflow: hidden;
+                font-size: 18px;
+                color: $warmGreyLight;
+                font-weight: 400;
+                margin-top: 0px;
+            }
+            .quizBottomArea{
+                position: absolute;
+                width: calc( 100% - 30px );
+                left: 15px;
+                bottom: 15px;
+            }
+        }
+    }
+}
