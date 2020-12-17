@@ -32,9 +32,9 @@
   margin-top: 30px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 991px) {
   .indexContainer .quizRow {
-    width: 100vw;
+    width: 100%;
     margin-left: 0px;
   }
   .indexContainer .quizRow > div:not(:first-of-type) {
@@ -80,7 +80,7 @@
   margin-top: 0px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 991px) {
   .indexContainer .quizBlock .quizInfo .quizTitle {
     font-size: 20px;
     max-height: 30px;
@@ -215,12 +215,25 @@
   background-position: center;
 }
 
+@media screen and (max-width: 1199px) {
+  .indexContainer .quizBlock.landing .quizCover {
+    width: calc( 100% - 300px);
+    padding-top: calc( (100% - 300px) * 9 / 16);
+  }
+}
+
 .indexContainer .quizBlock.landing .quizInfo {
   border-top: 0px;
   width: 390px;
   display: inline-block;
   padding: 15px;
   position: relative;
+}
+
+@media screen and (max-width: 1199px) {
+  .indexContainer .quizBlock.landing .quizInfo {
+    width: 300px;
+  }
 }
 
 .indexContainer .quizBlock.landing .quizTitle {
@@ -267,7 +280,7 @@
   bottom: 15px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 991px) {
   .indexContainer .quizBlock.landing {
     display: block;
   }
@@ -316,7 +329,7 @@
   margin-top: 5px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 991px) {
   .indexContainer .quizBlock.larger .quizTitle {
     font-size: 20px;
     max-height: 30px;
@@ -342,7 +355,7 @@
   margin-bottom: 60px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 991px) {
   .indexContainer .moreQuizContainer .moreQuiz {
     width: 160px;
     margin-top: 30px;
@@ -350,7 +363,7 @@
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 991px) {
   .indexContainer {
     margin-top: 53px;
   }

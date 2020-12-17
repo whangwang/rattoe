@@ -150,7 +150,8 @@ $step-y: 5px;
 /*
 === 5. Responsive ===
 */
-$tablet-sm-screen: 767px;
+$desk-sm-screen: 1199px;
+$tablet-sm-screen: 991px;
 $mobile-xs-screen: 480px;
 
 @mixin tablet(){
@@ -164,6 +165,12 @@ $mobile-xs-screen: 480px;
         @content
     }
 };
+
+@mixin desk-sm(){
+    @media screen and (max-width: $desk-sm-screen){
+        @content
+    }
+}
 
 @mixin desk-only(){
     @media screen and (min-width: $tablet-sm-screen + 1){

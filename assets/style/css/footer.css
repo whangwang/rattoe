@@ -29,7 +29,7 @@
   text-align: center;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 991px) {
   .globalFooter {
     padding: 15px 0px;
   }
@@ -40,7 +40,7 @@
   font-size: 13px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 991px) {
   .globalFooter .footerLinks, .globalFooter .copyright {
     font-size: 12px;
   }
@@ -51,7 +51,7 @@
   font-size: 13px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 991px) {
   .globalFooter .footerLinks span, .globalFooter .copyright span {
     font-size: 12px;
   }
@@ -62,7 +62,7 @@
   margin-right: 5px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 991px) {
   .globalFooter .footerLinks span.dot, .globalFooter .copyright span.dot {
     margin-left: 0px;
     margin-right: 0px;
@@ -73,7 +73,7 @@
   margin-left: 20px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 991px) {
   .globalFooter .footerLinks span.declare, .globalFooter .copyright span.declare {
     margin-left: 5px;
   }
@@ -91,7 +91,7 @@
   margin-top: 10px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 991px) {
   .globalFooter .footerLinks.copyright, .globalFooter .copyright.copyright {
     margin-top: 5px;
   }

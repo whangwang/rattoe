@@ -7,7 +7,7 @@
     .quizRow{
         margin-top: 30px;
         @include tablet(){
-            width: 100vw;
+            width: 100%;
             margin-left: 0px;
             &>div{
                 &:not(:first-of-type){
@@ -157,6 +157,10 @@
                 background-size: cover;
                 background-repeat: no-repeat;
                 background-position: center;
+                @include desk-sm(){
+                    width: calc( 100% - 300px );
+                    padding-top: calc( (100% - 300px) * 9 / 16 );
+                }
             }
             .quizInfo{
                 border-top: 0px;
@@ -164,6 +168,9 @@
                 display: inline-block;
                 padding: 15px;
                 position: relative;
+                @include desk-sm(){
+                    width: 300px;
+                }
             }
             .quizTitle{
                 font-weight: 700;

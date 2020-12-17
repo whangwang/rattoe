@@ -167,7 +167,7 @@ button:not(.detach).larger {
   font-size: 25px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 991px) {
   button:not(.detach).larger {
     height: 40px;
     font-size: 18px;
@@ -574,7 +574,7 @@ button:not(.detach):active.pastelRed {
 /*
 === 4. Responsive ===
 */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 991px) {
   .desk-only {
     display: none;
   }
@@ -584,7 +584,7 @@ button:not(.detach):active.pastelRed {
   display: none;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 991px) {
   .tablet-only {
     display: block;
   }
