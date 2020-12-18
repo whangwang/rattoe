@@ -129,6 +129,7 @@ body {
   user-select: none;
   margin-right: 5px;
   transform: translate(0px, 2px);
+  vertical-align: top;
 }
 
 .contentContainer .innerContainer .actionArea .rankQuiz {
@@ -146,6 +147,7 @@ body {
   color: #6D899E;
   line-height: 18px;
   font-size: 13px;
+  vertical-align: top;
 }
 
 .contentContainer .innerContainer .actionArea .commentQuiz {
@@ -163,6 +165,7 @@ body {
   border: 0px;
   user-select: none;
   color: #6D899E;
+  vertical-align: top;
 }
 
 .contentContainer .innerContainer .actionArea .socialLink {

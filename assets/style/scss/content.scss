@@ -89,6 +89,7 @@ body{
                 user-select: none;
                 margin-right: 5px;
                 transform: translate(0px, 2px);
+                vertical-align: top;
             }
             .rankQuiz{
                 padding-left: 23px;
@@ -105,6 +106,7 @@ body{
                 color: $blueGrey;
                 line-height: 18px;
                 font-size: $ft-small;
+                vertical-align: top;
             }
             .commentQuiz{
                 padding-left: 23px;
@@ -121,6 +123,7 @@ body{
                 border: 0px;
                 user-select: none;
                 color: $blueGrey;
+                vertical-align: top;
             }
             .socialLink{
                 width: 430px;

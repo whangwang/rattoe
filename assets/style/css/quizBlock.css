@@ -145,6 +145,7 @@
   user-select: none;
   margin-right: 5px;
   transform: translate(0px, 2px);
+  vertical-align: top;
 }
 
 .quizBlock .quizInfo .quizBottomArea .actionArea .rankQuiz {
@@ -162,6 +163,7 @@
   color: #6D899E;
   line-height: 18px;
   font-size: 13px;
+  vertical-align: top;
 }
 
 .quizBlock .quizInfo .quizBottomArea .actionArea .commentQuiz {
@@ -179,6 +181,7 @@
   border: 0px;
   user-select: none;
   color: #6D899E;
+  vertical-align: top;
 }
 
 .quizBlock.lightNavy .quizInfo {
