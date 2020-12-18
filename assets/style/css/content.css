@@ -24,7 +24,12 @@
 */
 body {
   background-color: white;
-  padding-bottom: 45px;
+}
+
+@media screen and (max-width: 991px) {
+  body {
+    padding-bottom: 45px;
+  }
 }
 
 .contentContainer {

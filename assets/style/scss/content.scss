@@ -148,7 +148,7 @@ body{
             }
         }
     }
-    @include tablet()
+    @include tablet(){
         margin-top: 68px;
         .innerContainer{
             padding-bottom: 15px;
