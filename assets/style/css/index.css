@@ -30,6 +30,8 @@
 
 .indexContainer .landingCarouselContainer {
   position: relative;
+  display: flex;
+  justify-content: center;
 }
 
 .indexContainer .landingCarouselContainer .slick-slide {
@@ -42,6 +44,7 @@
 
 .indexContainer .landingCarouselContainer .slick-dots {
   bottom: 20px;
+  width: auto;
 }
 
 .indexContainer .landingCarouselContainer .slick-dots li {

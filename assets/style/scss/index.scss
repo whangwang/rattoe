@@ -6,6 +6,8 @@
     padding-right: 0px;
     .landingCarouselContainer{
         position: relative;
+        display: flex;
+        justify-content: center;
         .slick-slide{
             height: auto;
         }
@@ -14,6 +16,7 @@
         }
         .slick-dots{
             bottom: 20px;
+            width: auto;
             li{
                 width: 10px;
                 height: 10px;

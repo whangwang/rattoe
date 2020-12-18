@@ -32,6 +32,53 @@ body {
   }
 }
 
+.contentLeft, .contentRight {
+  position: absolute;
+  width: 85px;
+  height: 90px;
+  position: fixed;
+  cursor: pointer;
+  top: calc( (100vh - 90px) / 2);
+  background-size: cover;
+  background-position: center;
+  z-index: 100000;
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 991px) {
+  .contentLeft, .contentRight {
+    display: none;
+  }
+}
+
+.contentLeft:after, .contentRight:after {
+  content: ' ';
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  left: 0;
+  top: 0;
+  position: absolute;
+}
+
+.contentLeft.contentLeft, .contentRight.contentLeft {
+  left: 0;
+  background-image: url(../../images/pic_l.png);
+}
+
+.contentLeft.contentLeft:after, .contentRight.contentLeft:after {
+  background-image: url(../../images/content_left.svg);
+}
+
+.contentLeft.contentRight, .contentRight.contentRight {
+  right: 0;
+  background-image: url(../../images/pic_l.png);
+}
+
+.contentLeft.contentRight:after, .contentRight.contentRight:after {
+  background-image: url(../../images/content_right.svg);
+}
+
 .contentContainer {
   text-align: center;
   margin-top: 145px;
@@ -183,6 +230,7 @@ body {
 
 .contentContainer .innerContainer .actionArea .socialLink .fbPageContainer {
   width: 100%;
+  overflow: hidden;
 }
 
 .contentContainer .innerContainer .fb-comments {
