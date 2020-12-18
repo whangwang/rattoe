@@ -32,6 +32,10 @@
   position: relative;
 }
 
+.indexContainer .landingCarouselContainer .slick-slide {
+  height: auto;
+}
+
 .indexContainer .landingCarouselContainer .slick-track {
   display: flex;
 }

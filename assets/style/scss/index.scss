@@ -6,6 +6,9 @@
     padding-right: 0px;
     .landingCarouselContainer{
         position: relative;
+        .slick-slide{
+            height: auto;
+        }
         .slick-track{
             display: flex;
         }
