@@ -194,6 +194,12 @@ button:not(.detach).pastelRed {
   background-color: #DC5D5B;
 }
 
+button:not(.detach).outline {
+  border: 1px solid #6D899E;
+  background-color: transparent;
+  color: #6D899E;
+}
+
 button:not(.detach):hover {
   background-color: #4e7fb4;
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
@@ -215,6 +221,11 @@ button:not(.detach):hover.pastelRed {
   background-color: #ff8e88;
 }
 
+button:not(.detach):hover.outline {
+  background-color: #6D899E;
+  color: white;
+}
+
 button:not(.detach):active {
   background-color: #002b57;
   box-shadow: none;
@@ -234,6 +245,11 @@ button:not(.detach):active.sunFlowerYellow {
 
 button:not(.detach):active.pastelRed {
   background-color: #a52c32;
+}
+
+button:not(.detach):active.outline {
+  background-color: #5A6266;
+  color: white;
 }
 
 /*

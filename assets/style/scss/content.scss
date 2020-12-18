@@ -1,0 +1,258 @@
+@import 'config';
+
+body{
+    background-color: white;
+    padding-bottom: 45px;
+}
+
+.contentContainer{
+    text-align: center;
+    margin-top: 145px; 
+    .innerContainer{
+        margin: auto;
+        width: 100%;
+        max-width: 850px;
+        .contentCover{
+            width: 100%;
+        }
+        .contentArea{
+            padding: 0px 30px;
+            .timeStamp{
+                text-align: left;
+                margin-top: 30px;
+                font-size: $ft-small;
+                color: $lightNavy;
+                font-weight: 700;
+            }
+            h1{
+                text-align: left;
+                margin-top: 30px;
+                font-size: 28px;
+                color: $darkGrey;
+                font-weight: 700;
+            }
+            .content{
+                text-align: left;
+                margin-top: 15px;
+                color: $slateGrey;
+                font-size: $ft-regular;
+                display: -webkit-box;
+                max-height: 22.5px;
+                line-height: 22.5px;
+                -webkit-line-clamp: 1;
+                /* autoprefixer: off */
+                -webkit-box-orient: vertical;
+                /* autoprefixer: on */
+                overflow: hidden;
+                &.expand{
+                    max-height: unset;
+                    -webkit-line-clamp: unset;
+                }
+            }
+            .buttonContainer{
+                text-align: right;
+                margin-top: 30px;
+                margin-bottom: 30px;
+            }
+            .contentTags{
+                margin-top: 60px;
+                margin-bottom: 25px;
+                span{
+                    font-size: $ft-small;
+                    background-color: $white-4;
+                    color: $warmGreyLight;
+                    padding: 2px 8px;
+                    display: inline-block;
+                    margin-right: 5px;
+                    margin-bottom: 5px;
+                }
+            }
+        }
+        .actionArea{
+            margin-top: 5px;    
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 90px;
+            .shareQuiz{
+                height: 18px;
+                width: 18px;
+                background-image: url(../../images/share_navy_icon.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-color: transparent;
+                cursor: pointer;
+                outline: none;
+                border: 0px;
+                user-select: none;
+                margin-right: 5px;
+                transform: translate(0px, 2px);
+            }
+            .rankQuiz{
+                padding-left: 23px;
+                height: 18px;
+                background-image: url(../../images/rank_navy_icon.png);
+                background-repeat: no-repeat;
+                background-size: 18px;
+                background-position: left;
+                background-color: transparent;
+                cursor: pointer;
+                outline: none;
+                border: 0px;
+                user-select: none;
+                color: $blueGrey;
+                line-height: 18px;
+                font-size: $ft-small;
+            }
+            .commentQuiz{
+                padding-left: 23px;
+                height: 18px;
+                line-height: 18px;
+                font-size: $ft-small;
+                background-image: url(../../images/comments_navy_icon.png);
+                background-repeat: no-repeat;
+                background-size: 18px;
+                background-position: left;
+                background-color: transparent;
+                cursor: pointer;
+                outline: none;
+                border: 0px;
+                user-select: none;
+                color: $blueGrey;
+            }
+            .socialLink{
+                width: 430px;
+                display: flex;
+                align-items: center;
+                &>span{
+                    font-size: $ft-small;
+                    margin-right: 30px;
+                    color: $warmGrey;    
+                    white-space: nowrap;
+                }
+                .fbPageContainer{
+                    width: 100%;
+                }
+            }
+        }
+        .fb-comments{
+            width: 100%!important;
+            margin-bottom: 30px;
+            iframe{
+                width: 100% !important;
+            }
+            span{
+                width: 100% !important;
+            }
+        }
+    }
+    @include tablet(){
+        margin-top: 68px;
+        .innerContainer{
+            padding-bottom: 15px;
+            .contentArea{
+                padding: 0px;
+                .timeStamp{
+                    margin-top: 15px;
+                }
+            }
+            hr{
+                display: none;
+            }
+            .actionArea{
+                margin-bottom: 0px;
+                .aboutContent{
+                    position: fixed;
+                    width: 100vw;
+                    background-color: white;
+                    z-index: 100;
+                    height: 45px;
+                    bottom: 0;
+                    left: 0;
+                    text-align: left;
+                    @include shadow(200);
+                }
+                .socialLink{
+                    flex-direction: column;
+                    width: 100%;
+                    span{
+                        margin-right: 0px;
+                        margin-bottom: 10px;
+                    }
+                }
+                .shareQuiz{
+                    height: 25px;
+                    width: 25px;
+                    margin-top: 10px;
+                    margin-left: 15px;
+                    transform: translate(0px, 0px);
+                    vertical-align: top;
+                    margin-right: 15px;
+                }
+                .rankQuiz{
+                    margin-top: 10px;
+                    height: 25px;
+                    background-size: 25px;
+                    line-height: 25px;
+                    vertical-align: top;
+                    margin-right: 10px;
+                    padding-left: 30px;
+                }
+                .commentQuiz{
+                    margin-top: 10px;
+                    height: 25px;
+                    line-height: 25px;
+                    background-size: 25px;
+                    vertical-align: top;
+                    padding-left: 30px;
+                }
+            }
+        }
+    }
+}
+
+.recommendArea{
+    width: 100%;
+    background-color: $white-2;
+    padding: 60px 0px;
+    .reommendAreaContent{
+        &>h1{
+            font-weight: 700;
+            text-align: center;
+            font-size: 28px;
+            color: $darkGrey;
+            font-weight: 700;
+            margin-top: 0px;
+            margin-bottom: 30px;
+            padding-bottom: 16px;
+            position: relative;
+            &:after{
+                content: ' ';
+                width: 85px;
+                height: 4px;
+                background-color: #135384;
+                margin: auto;
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                border-radius: 4px;
+            }
+        }
+    }
+    @include tablet(){
+        padding: 30px 0px;
+        .reommendAreaContent{
+            padding: 0px;
+            &>h1{
+                font-size: 20px;
+                padding-bottom: 10px;
+                margin-bottom: 15px;
+                &:after{
+                    width: 65px;
+                    height: 3px;
+                }
+            }
+        }
+    }
+}
