@@ -4,6 +4,7 @@
 2. Buttons
 3. Margins
 4. Responsive
+5. Loading
 === Menu ===
 */
 
@@ -209,5 +210,24 @@ button:not(.detach){
     display: none;
     @include mobile(){
         display: block;
+    }
+}
+
+/*
+=== 5. Loading ===
+*/
+
+.loadingContainer{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000000;
+    top: 0;
+    background-color: $white;
+    .loading{
+        width: 150px;
     }
 }

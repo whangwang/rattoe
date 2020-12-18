@@ -6,6 +6,9 @@
         width: 100%;
         margin-left: 0px;
         &>div{
+            &:first-of-type{
+                margin-top: 10px;
+            }
             &:not(:first-of-type){
                 margin-top: 30px;
             }
@@ -144,7 +147,7 @@
     }
     &.landing{
         position: relative;
-        display: flex;
+        display: inline-flex!important;
         .quizCover{
             width: calc( 100% - 390px );
             display: inline-block;
@@ -209,11 +212,14 @@
             bottom: 15px;
         }
         @include tablet(){
-            display: block;
+            display: block!important;
             .quizCover{
                 width: 100%;
                 display: block;
                 padding-top: calc( 100% * 9 / 16 );
+            }
+            .quizTitle{
+                min-height: 70px;
             }
             .quizInfo{
                 border-top: 0px;

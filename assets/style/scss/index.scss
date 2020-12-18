@@ -4,6 +4,51 @@
     margin-top: 145px;    
     padding-left: 0px;
     padding-right: 0px;
+    .landingCarouselContainer{
+        position: relative;
+        .slick-track{
+            display: flex;
+        }
+        .slick-dots{
+            bottom: 20px;
+            li{
+                width: 10px;
+                height: 10px;
+                transform: scale(0.8);
+                margin: 0;
+                &:not(:last-of-type){
+                    margin-right: 8px;
+                }
+                button{
+                    width: 100%;
+                    height: 100%;
+                    @include shadow(200);
+                    background-color: $white-1;
+                    @include tablet(){
+                        background-color: $pinkishGrey;
+                        @include shadow(clear);
+                    }
+                    &:before{
+                        display: none;
+                    }
+                }
+                &.slick-active{
+                    button{
+                        background-color: $warmGreyLight;
+                    }
+                }
+            }
+            @include tablet(){
+                bottom: -20px;
+                li{
+                    transform: none;
+                    &:not(:last-of-type){
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+    }
     .moreQuizContainer{
         text-align: center;
         .moreQuiz{
